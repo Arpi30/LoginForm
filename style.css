@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    color: rgba(132, 253, 10,.7);
+}
+body {
+    background: black url('images/bg.jpg') no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container {
+    opacity: 0;
+}
+form {
+    display: flex;
+    flex-flow: column;
+    margin-left: 10vw;
+    margin-bottom: 10vh;
+}
+input {
+    width: 10vw;
+    height: 2vh;
+    border: none;
+    background: none;
+    border-bottom: 2px solid rgba(102, 252, 127, 0.1);
+    font-size: 1.1rem;
+}
+input::placeholder {
+    color: rgba(132, 253, 10,.4);
+    right: 0;
+}
+.show_content {
+    position: absolute;
+}
+.login_button {
+    position: relative;
+    border: none;
+    background: none;
+    font-size: 3rem;
+    cursor: pointer;
+    letter-spacing: 5px;
+    overflow: hidden;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(132, 253, 10,.4);
+    box-shadow: inset 0 0 10px rgba(132, 253, 10,1);
+    transition: .5s;
+}
+.login_button:hover {
+    box-shadow: 0 0 10px rgba(132, 253, 10,.4),0 0 30px rgba(132, 253, 10,.4),
+    0 0 60px rgba(132, 253, 10,.4);
+    
+}
+.login_button span {
+    position: absolute;
+    display: block;
+}
+
+.login_button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg,transparent, rgba(132, 253, 10));
+    animation: neon1 2s infinite;
+    animation-play-state: paused;
+}
+
+.login_button:hover span:nth-child(1){
+    animation-play-state: running;
+}
+@keyframes neon1 {
+    form{left: 0;}
+    to{left: 100%;}
+}
+
+.login_button span:nth-child(2) {
+    right: 0;
+    top: -100%;
+    height: 100%;
+    width: 2px;
+    animation: neon2 2s infinite;
+    background: linear-gradient(180deg,transparent, rgba(132, 253, 10));
+    animation-play-state: paused;
+}
+.login_button:hover span:nth-child(2){
+    animation-play-state: running;
+}
+@keyframes neon2 {
+    form{top: 0;}
+    to{top: 100%;}
+}
+
+
+.login_button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(270deg,transparent, rgba(132, 253, 10));
+    animation: neon3 2s infinite;
+    animation-play-state: paused;
+}
+.login_button:hover span:nth-child(3){
+    animation-play-state: running;
+}
+@keyframes neon3 {
+    form{right: 0;}
+    to{right: 100%;}
+}
+
+.login_button span:nth-child(4) {
+    left: 0;
+    bottom: -100%;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(360deg,transparent, rgba(132, 253, 10));
+    animation: neon4 2s infinite;
+    animation-play-state: paused;
+}
+.login_button:hover span:nth-child(4){
+    animation-play-state: running;
+}
+@keyframes neon4 {
+    form{bottom: 0;}
+    to{bottom: 100%;}
+}
